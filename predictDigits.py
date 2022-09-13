@@ -8,8 +8,11 @@ def imageToData(filename):
     grayImage = grayImage.resize((8, 8), PIL.Image.ANTIALIAS)
 
     numImage = numpy.asarray(grayImage, dtype = float)
+    print(numImage)
     numImage = numpy.floor(16 - 16 * (numImage / 256))
+    print(numImage)
     numImage = numImage.flatten()
+    print(numImage)
 
     return numImage
 
